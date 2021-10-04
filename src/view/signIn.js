@@ -30,6 +30,7 @@ export const signIn = () => {
             <div class='div'>
               <input class='form-input' type="password"  id="signin-password" placeholder=" " autocomplete=off required>
               <label class='form-label'>Contraseña</label>
+              <i class="far fa-eye" id="form-eye"></i>
             </div>
           </div>
           <p class="error-password"></p>
@@ -55,6 +56,15 @@ export const signIn = () => {
   sectionElement.classList.add('container-box');
   sectionElement.innerHTML = viewSignIn;
 
+  const eyebtn = sectionElement.querySelector('#form-eye');
+
+  eyebtn.addEventListener('click', (e) => {
+    e.preventDefault();
+    const inputPassword = sectionElement.querySelector('#signin-password');
+    const type = inputPassword.getAttribute('type') === 'password' ? 'text' : 'password';
+    inputPassword.setAttribute('type', type);
+  });
+
   const signinBtm = sectionElement.querySelector('#start-button');
   signinBtm.addEventListener('click', (e) => {
     e.preventDefault();
@@ -62,7 +72,6 @@ export const signIn = () => {
     const signInPassword = sectionElement.querySelector('#signin-password').value;
     const errorEmail = sectionElement.querySelector('.error-email');
     const errorPassword = sectionElement.querySelector('.error-password');
-
     errorEmail.innerHTML = '';
     errorPassword.innerHTML = '';
     if (signInPassword === '' && signInEmail === '') {

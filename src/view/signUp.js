@@ -40,6 +40,7 @@ export const signUp = () => {
           <div class='div'>
             <input class='form-input' type='password' id="signup-password" placeholder=" "  autocomplete=off required>
             <label class='form-label'>Contraseña</label>
+            <i class="far fa-eye" id="form-eye"></i>
           </div>
         </div>
         <span class="error-password"></span>
@@ -60,6 +61,13 @@ export const signUp = () => {
 
   sectionElement.classList.add('container-box');
   sectionElement.innerHTML = viewSignUp;
+  const eyebtn = sectionElement.querySelector('#form-eye');
+  eyebtn.addEventListener('click', (e) => {
+    e.preventDefault();
+    const inputPassword = sectionElement.querySelector('#signup-password');
+    const type = inputPassword.getAttribute('type') === 'password' ? 'text' : 'password';
+    inputPassword.setAttribute('type', type);
+  });
   /* ------------------------------Registrar con correo y contraseña ---------------------- */
   const signupForm = sectionElement.querySelector('#create-account');
   signupForm.addEventListener('click', (e) => {
@@ -86,6 +94,7 @@ export const signUp = () => {
             swal('La verificación ha sido enviada.');
             window.location.hash = '#/signin';
             const user = currentUser();
+            console.log(user);
             user.updateProfile({
               displayName: signupUsername,
             }).then(() => {

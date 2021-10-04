@@ -14,7 +14,6 @@ body{
         #dc8eaa 74.89%, 
         #9885f7 97.92%
     );
-    /* cursor: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/9632/happy.png"), auto; */
 }
 .container-box{
     margin: 10px 10px;
@@ -157,7 +156,8 @@ form{
     position: absolute;
     top: 0;
     left: 1rem;
-    width: 100%;
+    width: 17vw;
+    min-width: 150px;
     height: 100%;
     font-size: 1rem;
     border: transparent;
@@ -244,7 +244,15 @@ a{
     padding: 5px 0;
     border-bottom: 2px solid #d9d9d9;
 }
-
+#form-eye {
+    position: absolute;
+    right: 0rem;
+    padding: 0 .9rem;
+    color: #80868B;
+    font-size: 1.3rem;
+    transition: .5s;
+    cursor:pointer;
+}
 span{
     color: rgb(75, 73, 73);
 }

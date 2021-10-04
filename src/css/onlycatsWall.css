@@ -76,11 +76,11 @@ background-color: transparent;
 }
 .scroll-container::-webkit-scrollbar{
     width: 5px;
-     height:5px;
-     background-color: transparent;
+    height:5px;
+    background-color: transparent;
 }
 .scroll-container::-webkit-scrollbar-thumb{
-     background-color: transparent;
+    background-color: transparent;
 }
 /*---------------------------Muro:Post----------------------------*/
 .background-posts{
@@ -345,7 +345,7 @@ background-color: transparent;
         font-weight: 550;
         cursor: pointer;
         margin-left: 20px;
-    } 
+    }
     .img-memes{
         display:block;
         width: 8vw;
@@ -378,8 +378,7 @@ background-color: transparent;
         align-items: center;
         height: calc(100vh - 200px);
         width: 20vw;
-    } 
-    
+    }
     .profile-btn{
         border: none;
         color: white;
@@ -415,5 +414,4 @@ background-color: transparent;
         padding: 20px;
         text-align:center;
     }
-   
 }
