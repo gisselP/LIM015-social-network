@@ -101,7 +101,6 @@ export const pageOnlyCats = () => {
       newPost.innerHTML = ' ';
       querySnapshot.forEach((doc) => {
         const dataContent = doc.data();
-        dataContent.id = doc.id;
         newPost.innerHTML += `
         <article class="profile-post">
           <div class="container-photo">
@@ -114,12 +113,8 @@ export const pageOnlyCats = () => {
             <img src="${(dataContent.postImage.length === 1) ? '' : dataContent.postImage}" class="post-photo" >
             </div>
             <div class="likes-container">
-              <i class="far fa-heart" id="${dataContent.id}"></i>
-              <img src="https://img.icons8.com/color/48/000000/dog-paw-print.png" class="pata" >
-              <img src="https://img.icons8.com/external-tulpahn-flat-tulpahn/64/000000/external-kissing-cat-emoji-tulpahn-flat-tulpahn.png" class="pata" >
-              <img src="https://img.icons8.com/cute-clipart/64/000000/cat.png" class="pata" >
-              <img src="img/recurso-1.png" class="pata" >
-              <span>${dataContent.likes.length} </span>
+              <img src="${dataContent.likes.includes(localUser.uid) ? 'img/pata-love2.png' : 'img/pata-love.png'}" class="pata" id="${doc.id}" >
+              <span class="num-like">${(dataContent.likes.length) ? dataContent.likes.length : ''} </span>
             </div>
           </section>
           <section class="update-post  ${(dataContent.email === localUser.email) ? '' : 'hide'}">
@@ -181,7 +176,7 @@ export const pageOnlyCats = () => {
       });
 
       // -------- Like Posts  --------
-      const btnHeart = sectionElement.querySelectorAll('.fa-heart');
+      const btnHeart = sectionElement.querySelectorAll('.pata');
       btnHeart.forEach((btn) => {
         btn.addEventListener('click', (e) => {
           getPost(e.target.id)

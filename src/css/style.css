@@ -244,7 +244,7 @@ a{
     padding: 5px 0;
     border-bottom: 2px solid #d9d9d9;
 }
-#form-eye {
+.fa-eye {
     position: absolute;
     right: 0rem;
     padding: 0 .9rem;

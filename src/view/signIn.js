@@ -30,7 +30,7 @@ export const signIn = () => {
             <div class='div'>
               <input class='form-input' type="password"  id="signin-password" placeholder=" " autocomplete=off required>
               <label class='form-label'>Contraseña</label>
-              <i class="far fa-eye" id="form-eye"></i>
+              <i class="far fa-eye"  id="form-eye" ></i>
             </div>
           </div>
           <p class="error-password"></p>
