@@ -98,6 +98,7 @@ background-color: transparent;
     width: 90vw;
     min-width: 298px;
     padding: 15px;
+    padding-bottom: 10px;
     background: linear-gradient( to right bottom, rgba(255,255,255,0.7), rgba(255,255,255,0.2) );
     box-shadow: 0px 1px 10px rgb(0 0 0 / 25%);
     border-radius: 10px;
@@ -146,6 +147,7 @@ background-color: transparent;
 .text-output{
     padding-top: 5px;
     padding-bottom: 10px;
+    height: 0px;
 }
 .post-icon{
     display:flex;
@@ -205,13 +207,6 @@ background-color: transparent;
     display: flex;
     align-items: center;
 }
-.btn-heart{
-    width: 22px;
-    margin-right: 5p;
-}
-.fa-heart:hover{
-    cursor: pointer;
-}
 .profile-container{
     display: none;
 }
@@ -222,8 +217,20 @@ background-color: transparent;
     width: 58vw;
     min-width: 190px;
 }
+.likes-container{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+.num-like{
+    padding: 5px;
+    color: rgb(250, 119, 189);
+}
 .pata{
-    width: 25px;
+    width: 35px;
+}
+.pata:hover{
+    cursor: pointer;
 }
 /*---------------------------View Tablet--------------------------- */
 @media only screen and (min-width:768px){
