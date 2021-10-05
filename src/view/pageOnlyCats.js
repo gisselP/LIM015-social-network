@@ -215,8 +215,9 @@ export const pageOnlyCats = () => {
   /* -------------------------------Crear Post (C) ------------------------- */
   btnPublish.addEventListener('click', async () => {
     // EditStatus sera falso cuando no exista un post, y recién se este creando
-    btnPublish.innerHTML += '<embed src="./img/miau.mp3" volume="0.5" autostart="true" width="0" height="0"/>';
-    btnPublish.innerHTML += '';
+    btnPublish.innerHTML = '';
+    btnPublish.innerHTML += '<embed src="./img/miau.mp3" volume="0.5" autostart="true" width="0" height="0"/>Meow';
+    /* btnPublish.innerHTML = ''; */
     const postImage = container.querySelector('#postImage');
     const objFileImg = postImage.files[0];
     const dir = 'posts';
