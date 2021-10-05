@@ -66,7 +66,6 @@
         margin: auto;
     }
     .img-memes{
-        display:block;
         width: 8vw;
         /* display: none; */
     }
@@ -138,11 +137,6 @@
     .scroll-container{
         height: calc(100vh - 143px);
     }
-    .fa-sign-out-alt{
-    
-        padding-top: 40px;
-        padding-right: 30px;
-    }
     .post-label{
         grid-template-columns: 1fr 1fr;
     }
@@ -173,13 +167,12 @@
     }
     .container-profile{
         margin-top: -20px;
-
     }
-    /* .fa-sign-out-alt{
-        color: #4f46c8;
+    .fa-sign-out-alt{
         font-size: 25px;
         position:absolute;
         cursor: pointer;
         right: 40px;
-    } */
+        top:30px;
+    }
 }

@@ -220,14 +220,18 @@ background-color: transparent;
     background: linear-gradient( to right bottom, 
         rgba(255, 255, 255, 0.919), 
         rgba(255, 255, 255, 0.72) );
-    top: -100vh;
+    bottom: 1vh;
     width: 95vw;
     border-radius: 20px;
     display: flex;
     align-items: center;
     flex-direction: column;
     justify-content: center;
-    transition: all 0.5s;
+    transition:  0.5s;
+}
+.show{
+    bottom: -100vh;
+    transition:  0.5s;
 }
 .label-name{
     display:none;
@@ -250,9 +254,6 @@ background-color: transparent;
 }
 .pata:hover{
     cursor: pointer;
-}
-.show{
-    top: 35vh;
 }
 .profile-fondo{
     width:95vw;
@@ -298,11 +299,9 @@ background-color: transparent;
     border: none;
     color: white;
     border-radius: 10px;
-    font-size: 20px;
-    /* font-weight: 550; */
-    padding: 5px 15px;
+    font-size: 15px;
+    padding: 10px 15px;
     background: #746CEF;
-    /* padding: 10px; */
     margin:21px;
     cursor:  pointer;
 }
