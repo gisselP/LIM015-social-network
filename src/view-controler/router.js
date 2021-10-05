@@ -7,11 +7,11 @@ const changeView = (route) => {
     case '':
     case '#/': container.appendChild(components.Home());
       break;
-    case '#/SignIn': container.appendChild(components.SignIn());
+    case '#/signin': container.appendChild(components.SignIn());
       break;
-    case '#/SignUp': container.appendChild(components.SignUp());
+    case '#/signup': container.appendChild(components.SignUp());
       break;
-    case '#/OnlyCats': container.appendChild(components.OnlyCats());
+    case '#/onlycats': container.appendChild(components.OnlyCats());
       break;
     default: container.appendChild(components.Error());
   }
