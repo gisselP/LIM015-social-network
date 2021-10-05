@@ -75,6 +75,14 @@ describe('currentUser', () => {
   it('debería ser una función', () => {
     expect(typeof currentUser).toBe('function');
   });
+  it('debeía ser un current', () => {
+    const user = {
+      displayName: 'Pepa',
+      email: 'pepa.123@gmail.com',
+    };
+    const current = currentUser();
+    expect(user).toBe(current);
+  });
 });
 
 describe('onAuthStateChanged', () => {
