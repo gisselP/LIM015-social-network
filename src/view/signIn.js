@@ -18,7 +18,7 @@ export const signIn = () => {
               <i class="fas fa-user"></i>
             </div>
             <div class='div'>
-              <input class='form-input' type='email' id='signin-email' placeholder=" "  autocomplete=off required>
+              <input class='form-input' type='email' id='signin-email' placeholder=" "  autocomplete=off >
               <label class='form-label'>Email</label>
             </div>
           </div>
@@ -28,7 +28,7 @@ export const signIn = () => {
               <i class="fas fa-lock"></i>
             </div>
             <div class='div'>
-              <input class='form-input' type="password"  id="signin-password" placeholder=" " autocomplete=off required>
+              <input class='form-input' type="password"  id="signin-password" placeholder=" " autocomplete=off >
               <label class='form-label'>Contraseña</label>
               <i class="far fa-eye"  id="form-eye" ></i>
             </div>
