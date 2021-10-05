@@ -1,7 +1,8 @@
+/* eslint-disable no-console */
 import MockFirebase from 'mock-cloud-firestore';
 import {
   postCollection, getCollection, postUserCollection,
-  getUserCollection, deletePost, getPost,
+  getUserCollection, deletePost, getPost, editPost, editLike,
 } from '../src/firebase/firebase-firestore.js';
 
 // Simulación de la data
@@ -94,4 +95,37 @@ describe('getPost', () => {
       })
       .catch(() => {});
   });
+});
+
+describe('editPost', () => {
+  it('updatePost deberia ser una función', () => {
+    expect(typeof editPost).toBe('function');
+  });
+  // it('Debería poder actualizar un post', () => {
+  //   editPost('a3b2c3', 'No quiero compartir nada');
+  //   getCollection().then((docRef) => {
+  //     docRef.forEach((doc) => {
+  //       if (doc.data().id === 'a3b2c3') {
+  //         const update = doc.data();
+  //         expect(typeof update).toBe('object');
+  //       }
+  //     });
+  //   });
+  // });
+});
+
+describe('editLike', () => {
+  it('debería ser una función', () => {
+    expect(typeof editLike).toBe('function');
+  });
+  // it('Debería poder actualizar un post', () => {
+  //   editLike('a3b2c3', 'No quiero compartir nada');
+  //   getCollection().then((docRef) => {
+  //     docRef.forEach((doc) => {
+  //       if (doc.data().id === 'a3b2c3') {
+  //         const update = doc.data().text;
+  //         expect(typeof update).toBe('object');
+  //       }
+  //     });
+  //   });
 });

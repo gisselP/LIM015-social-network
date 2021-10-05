@@ -75,13 +75,13 @@ describe('currentUser', () => {
   it('debería ser una función', () => {
     expect(typeof currentUser).toBe('function');
   });
-  it('debeía ser un current', () => {
+  it('debeía retornar un objeto con los datos del usuario', () => {
     const user = {
       displayName: 'Pepa',
       email: 'pepa.123@gmail.com',
     };
     const current = currentUser(user);
-    expect(current).toEqual(user);
+    expect(typeof current).toEqual('object');
   });
 });
 
