@@ -40,27 +40,23 @@ que detalles:
 
 ### 4.2 Historias de usuario
 
-Una vez que entiendas las necesidades de tus usuarixs, escribe las Historias de
-Usuario que representen todo lo que necesitan hacer/ver en la Red Social. Cada
-una de tus Historias de Usuario debe tener:
+Una vez que se entendio las necesidades de los usuarixs, se escribieron. Cada
+una de las Historias de Usuario tiene:
 
-* **Criterios de Aceptación:** todo lo que debe ocurrir para satisfacer las
+* **Criterios de Aceptación:** Todo lo que debe ocurrir para satisfacer las
   necesidades del usuario.
 
-* **Definición de terminado:** todos los aspectos técnicos que deben cumplirse
-  para que, como equipo, sepan que esa historia está terminada y lista
-  para publicarse. **Todas** tus Historias de Usuario (salvo excepciones), deben
-  incluir estos aspectos en su Definición de Terminado (más todo lo que
-  necesiten agregar):
-
-  - Debe ser una SPA.
-  - Debe ser _responsive_.
-  - Deben haber recibido _code review_ de al menos una compañera de otro equipo.
-  - Hicieron los _test_ unitarios
+* **Definición de terminado:** Todos los aspectos técnicos que cumplen. **Todas** las Historias de Usuario (salvo excepciones),incluyen estos aspectos en su Definición de Terminado:
+  - Es SPA.
+  - Es _responsive_.
+  - Ha recibido _code review_ de al menos una compañera de otro equipo.
+  - Contienen _test_ unitarios
   - Testearon manualmente buscando errores e imperfecciones simples.
   - Hicieron _pruebas_ de usabilidad e incorporaron el _feedback_ de los
     usuarios como mejoras.
   - Desplegaron su aplicación y etiquetaron la versión (git tag).
+
+![Historias de usuario](./img/Historiadeusuario.png)
 
 ### 4.3 Diseño de la Interfaz de Usuario (prototipo de baja fidelidad)
 
