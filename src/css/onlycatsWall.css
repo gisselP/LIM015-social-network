@@ -53,6 +53,9 @@
     box-shadow: 7px 7px 15px rgba(0, 0, 0, 0.25);
     cursor: pointer;
 }
+a{
+    color:white;
+}
 .meme{
     background: linear-gradient(89.82deg, #BDE991 0.13%, #A6E5F3 99.82%);
     text-shadow: rgb(145, 191, 146) 1px 0 10px;
@@ -162,10 +165,7 @@ background-color: transparent;
     display:flex;
     justify-content: space-between;
 }
-.fa-image{
-    color: #F25A51;
-    font-size: 23px;
-}
+
 .img-memes{
     display:none;
 }

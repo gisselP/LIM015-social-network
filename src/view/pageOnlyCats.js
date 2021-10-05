@@ -43,15 +43,15 @@ export const pageOnlyCats = () => {
         <p class="label-name"> ¿Qué ver? </p>
         <div class="post-label meme">
           <img src="./img/memecat.png" alt="memes" class="img-memes">
-          <p>Memes</p>
+          <a href="https://www.instagram.com/gatitosdepresion/?hl=es " target="_blank">Memes</a>
         </div>
         <div class="post-label vet">
           <img src="./img/vetcat.png" alt="memes" class="img-memes">
-          <p>Vet Cat</p>
+          <a href="https://www.instagram.com/gatopolis.veterinaria/?hl=es" target="_blank" >Vet Cat</a>
         </div>
         <div class="post-label foodie">
           <img src="./img/foodiecat.png" alt="memes" class="img-memes">
-          <p>Foodie</p>
+          <a href="https://mascotaveloz.pe/gatos/?gclid=CjwKCAjw7--KBhAMEiwAxfpkWDNekHO1YjCAFIoffxbycyo4fNjqxzZAnu8fFG2OGmzvcF4jqrIy9hoCgqoQAvD_BwE" target="_blank">Foodie</a>
         </div>
       </section>
       <section class="scroll-container">
@@ -63,8 +63,7 @@ export const pageOnlyCats = () => {
             <textarea class="text-input" id="text-input" placeholder="¿Miau esta pasando?"></textarea>
             <div class="post-icon">
               <label class="postImage">
-                <input class="post-file" type="file" id="postImage" accept="image/*" style="display:none" /> 
-                <i class="fas fa-image"></i>
+                <input class="post-file" type="file" id="postImage" accept="image/*" /> 
               </label>
               <button class="post-button hide" id="cancel-button" type="submit">Cancelar</button>
               <button class="post-button" id="post-button" type="submit">Meow</button>
