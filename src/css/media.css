@@ -1,0 +1,178 @@
+/*---------------------------View Tablet--------------------------- */
+@media only screen and (min-width:768px){
+    .page-container {
+        height: calc(100vh - 20px);
+    }
+    .label-container{
+        box-shadow: 10px 10px 15px rgb(0 0 0 / 10%);
+        height: calc(100vh - 100px);
+        display: flex;
+        flex-direction: column;
+        background: linear-gradient( to right bottom, 
+        rgba(255,255,255,0.7), 
+        rgba(255,255,255,0.2) );
+        border-radius: 15px;
+        width: 25vw;
+        justify-content: space-evenly;
+        padding: 10px;
+        align-items: center;
+        margin-top: 10px;
+    }
+    .label-btn{
+        border-radius:10px;
+        padding: 10px;
+        width: 17vw;
+        border:none;
+        color: white;
+        text-shadow: rgb(140, 139, 138) 1px 0 10px;
+        font-size: 20px;
+        font-weight: 550;
+        cursor: pointer;
+        margin-left: 20px;
+    }
+    .post-photo{
+        width: 45vw;
+    }
+    .post-file{
+        width: 250px;
+    }
+    .main-container{
+        display: flex;
+        justify-items: center;
+        align-items: center;
+        justify-content: center;
+        gap: 20px;
+    }
+    .profile-post{
+        width: 60vw;
+    }
+    .home-container{
+        height:  calc(100vh - 20px);
+    }
+    .fa-sign-out-alt{
+        color: #4f46c8;
+        font-size: 25px;
+        cursor: pointer;
+
+    }
+    .img-web {
+        display:block;
+        width: 25vw;
+    }
+    .web-container{
+        display: grid;
+        grid-template-columns: 60% 40%;
+        align-items: center;
+        margin: auto;
+    }
+    .img-memes{
+        width: 8vw;
+        /* display: none; */
+    }
+    .page-title{
+        width: 15vw;
+    }
+    .label-name{
+        display:block;
+        color: #120B73;
+        font-size: 25px;
+        font-weight: 550;
+    }
+    .scroll-container {
+        height: calc(100vh - 90px);
+    }
+    .post-label{
+        display: grid;
+        grid-template-columns: 1fr ;
+        border-radius: 15px;
+        justify-items: center;
+        align-items: center;
+        color: #FFF;
+        font-weight: 550;
+        font-size: 20px;
+        width: 15vw;
+        height: 9vw;
+        cursor: pointer;
+    }
+}
+
+/*---------------------------View Desktop--------------------------- */
+@media only screen and (min-width:1024px){
+    .cat-icon{
+        display:none;
+    }
+    .profile-post{
+        width: 45vw;
+        gap:1vw;
+    }
+    .post-photo{
+        width: 35vw;
+    }
+    .label-container{
+        height: calc(100vh - 150px);
+        width: 20vw;
+    }
+    .label-btn{
+        border-radius:10px;
+        padding: 10px;
+        width: 17vw;
+        border:none;
+        color: white;
+        text-shadow: rgb(140, 139, 138) 1px 0 10px;
+        font-size: 20px;
+        font-weight: 550;
+        cursor: pointer;
+        margin-left: 20px;
+    }
+    .img-memes{
+        display:block;
+        width: 8vw;
+    }
+    .post-button{
+        font-size: 20px;
+    }
+    .page-title{
+        padding-top: 30px;
+    }
+    .scroll-container{
+        height: calc(100vh - 143px);
+    }
+    .post-label{
+        grid-template-columns: 1fr 1fr;
+    }
+    .page-container{
+        height:  calc(100vh - 20px);
+    }
+    
+    .profile-container{
+        position: relative;
+        height: calc(100vh - 155px);
+        width: 20vw;
+        background: linear-gradient( to right bottom, rgba(255,255,255,0.7), rgba(255,255,255,0.2) );
+        transition: all 0.5s;
+        top:5px;
+    }
+    .profile-fondo{
+        width:20vw;
+        height: 150px;
+        min-width: 150px;
+        transition: 0.5s;
+        position: absolute;
+        top: 0px;
+        left:-0px;
+       
+    }
+    .container-userPhoto{
+        top: -50px;
+    }
+    .container-profile{
+        margin-top: -20px;
+    }
+    .fa-sign-out-alt{
+        font-size: 25px;
+        position:absolute;
+        cursor: pointer;
+        right: 40px;
+        top:30px;
+    }
+}
