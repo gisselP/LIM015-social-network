@@ -151,9 +151,6 @@
     .page-container{
         height:  calc(100vh - 20px);
     }
-    .profile-post{
-        gap:0px;
-    }
     .profile-container{
         position: relative;
         height: calc(100vh - 155px);
