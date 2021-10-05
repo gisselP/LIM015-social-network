@@ -43,15 +43,15 @@ export const pageOnlyCats = () => {
         <p class="label-name"> ¿Qué ver? </p>
         <div class="post-label meme">
           <img src="./img/memecat.png" alt="memes" class="img-memes">
-          <a href="https://www.instagram.com/gatitosdepresion/?hl=es " target="_blank">Memes</a>
+          <a class="link-labels" href="https://www.instagram.com/gatitosdepresion/?hl=es " target="_blank">Memes</a>
         </div>
         <div class="post-label vet">
           <img src="./img/vetcat.png" alt="memes" class="img-memes">
-          <a href="https://www.instagram.com/gatopolis.veterinaria/?hl=es" target="_blank" >Vet Cat</a>
+          <a class="link-labels" href="https://www.instagram.com/gatopolis.veterinaria/?hl=es" target="_blank" >Vet Cat</a>
         </div>
         <div class="post-label foodie">
           <img src="./img/foodiecat.png" alt="memes" class="img-memes">
-          <a href="https://mascotaveloz.pe/gatos/?gclid=CjwKCAjw7--KBhAMEiwAxfpkWDNekHO1YjCAFIoffxbycyo4fNjqxzZAnu8fFG2OGmzvcF4jqrIy9hoCgqoQAvD_BwE" target="_blank">Foodie</a>
+          <a class="link-labels" href="https://mascotaveloz.pe/gatos/?gclid=CjwKCAjw7--KBhAMEiwAxfpkWDNekHO1YjCAFIoffxbycyo4fNjqxzZAnu8fFG2OGmzvcF4jqrIy9hoCgqoQAvD_BwE" target="_blank">Foodie</a>
         </div>
       </section>
       <section class="scroll-container">
@@ -214,10 +214,9 @@ export const pageOnlyCats = () => {
 
   /* -------------------------------Crear Post (C) ------------------------- */
   btnPublish.addEventListener('click', async () => {
-    // EditStatus sera falso cuando no exista un post, y recién se este creando
     btnPublish.innerHTML = '';
     btnPublish.innerHTML += '<embed src="./img/miau.mp3" volume="0.5" autostart="true" width="0" height="0"/>Meow';
-    /* btnPublish.innerHTML = ''; */
+    // EditStatus sera falso cuando no exista un post, y recién se este creando
     const postImage = container.querySelector('#postImage');
     const objFileImg = postImage.files[0];
     const dir = 'posts';
