@@ -56,7 +56,7 @@ una de las Historias de Usuario tiene:
     usuarios como mejoras.
   - Desplegaron su aplicación y etiquetaron la versión (git tag).
 
-![Historias de usuario](./img/Historiasdeusuario.png)
+![Historias de usuario](./src/img/Historiasdeusuario.png)
 
 ### 4.3 Diseño de la Interfaz de Usuario (prototipo de baja fidelidad)
 
