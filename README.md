@@ -1,11 +1,11 @@
-# Only Cats :smiley_cat:
+# Only Cats :smiley_cat:	:paw_prints:
 
 ## Índice
 
 * [1. Preámbulo](#1-preámbulo)
-* [2. Resumen del proyecto](#2-resumen-del-proyecto)
-* [3. Historias de usuario](#3-historia-de-usurio)
-* [4. Pagina web](#4-pagina-web)
+* [2. Resumen del proyecto](#2-Resumen-del-proyecto)
+* [3. Historias de usuario](#3-historias-de-usuario)
+* [4. Pagina web](#4-página-web)
 
 ## 1. Preámbulo
 
@@ -20,7 +20,7 @@ investigaciones, comentar en los artículos de sus colegas, y filtrar artículos
 de acuerdo a determinadas etiquetas o su popularidad, lo más reciente, o lo
 más comentado.
 
-## 2. Resumen del proyecto :smirk_cat:
+## 2. Resumen del proyecto
 OnlyCats es una red social creada para interacturar y compartir contenido con usuarios amantes de los gatos. Te permite crear una cuenta de acceso y loguearse con ella; crear, editar, borrar y _"likear"_ publicaciones. Implementada en lenguaje Javascript utilizando CSS, HTML y Firebase para el almacenamiento de datos.
 ## 3. Historias de usuario
 ### 3.1 Definición del producto
@@ -68,7 +68,7 @@ Siguiendo el flujo del prototipo de baja fidelidad, se realizo el prototipo de a
     ![desktop](./src/img/altafidelidadDekstop.png)
 
 
-## 4. Página web (responsive) :joy_cat:
+## 4. Página web
 Se puede ver en dispositivos de pantallas grandes (computadoras/es, laptops, etc.) y pequeñas (_tablets_, celulares, etc.). Se implementaron con la técnica de _`mobile first`_ .
 
 * **Vista mobile:**
