@@ -81,4 +81,9 @@ describe('onAuthStateChanged', () => {
   it('debería ser una función', () => {
     expect(typeof onAuthStateChanged).toBe('function');
   });
+  it('debeía ser un observador', () => {
+    const callback = () => {};
+    onAuthStateChanged(callback);
+    expect(callback).toEqual(callback);
+  });
 });
