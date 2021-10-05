@@ -1,8 +1,5 @@
 /*---------------------------View Tablet--------------------------- */
 @media only screen and (min-width:768px){
-    header{
-
-    }
     .page-container {
         height: calc(100vh - 20px);
     }
@@ -71,7 +68,7 @@
     .img-memes{
         display:block;
         width: 8vw;
-        display: none;
+        /* display: none; */
     }
     .page-title{
         width: 15vw;
@@ -178,11 +175,11 @@
         margin-top: -20px;
 
     }
-    .fa-sign-out-alt{
+    /* .fa-sign-out-alt{
         color: #4f46c8;
         font-size: 25px;
         position:absolute;
         cursor: pointer;
         right: 40px;
-    }
+    } */
 }

@@ -32,15 +32,11 @@ describe('postCollection', () => {
   it('debería ser una función', () => {
     expect(typeof postCollection).toBe('function');
   });
-  it('debería insertar un nuevo doc', () => {
+  it('debería recibir un objeto', () => {
     postCollection('Pepa', 'hola, que tal', 'pepa@gmail.com', 'a3b4c5')
-      .then(() => {
-        getCollection().then((docRef) => {
-          docRef.forEach((doc) => {
-            const dataContent = doc.data();
-            expect(dataContent).toBe('Pepa', 'hola, que tal', 'pepa@gmail.com', 'a3b4c5');
-          });
-        });
+      .then((res) => {
+        console.log(postCollection);
+        expect(typeof res).toBe('object');
       })
       .catch(() => {
 
@@ -52,15 +48,10 @@ describe('postUserCollection', () => {
   it('debería ser una función', () => {
     expect(typeof postUserCollection).toBe('function');
   });
-  it('debería insertar un nuevo doc', () => {
+  it('debería recibir un objeto', () => {
     postUserCollection('Pepa', 'pepa@gmail.com')
-      .then(() => {
-        getUserCollection().then((docRef) => {
-          docRef.forEach((doc) => {
-            const dataContent = doc.data();
-            expect(dataContent).toBe('Pepa', 'pepa@gmail.com');
-          });
-        });
+      .then((res) => {
+        expect(typeof res).toBe('object');
       })
       .catch(() => {
 
@@ -71,5 +62,15 @@ describe('postUserCollection', () => {
 describe('deletePost', () => {
   it('debería ser una función', () => {
     expect(typeof deletePost).toBe('function');
+  });
+});
+describe('getUserCollection', () => {
+  it('debería ser una función', () => {
+    expect(typeof getUserCollection).toBe('function');
+  });
+});
+describe('getCollection', () => {
+  it('debería ser una función', () => {
+    expect(typeof getCollection).toBe('function');
   });
 });
