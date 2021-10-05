@@ -1,5 +1,9 @@
 /*---------------------------View Tablet--------------------------- */
 @media only screen and (min-width:768px){
+    .text-output,
+    .text-input{
+        width: 45vw;
+    }
     .page-container {
         height: calc(100vh - 20px);
     }
@@ -98,6 +102,10 @@
 
 /*---------------------------View Desktop--------------------------- */
 @media only screen and (min-width:1024px){
+    .text-output,
+    .text-input{
+        width: 30vw;
+    }
     .cat-icon{
         display:none;
     }
@@ -143,7 +151,9 @@
     .page-container{
         height:  calc(100vh - 20px);
     }
-    
+    .profile-post{
+        gap:0px;
+    }
     .profile-container{
         position: relative;
         height: calc(100vh - 155px);

@@ -80,8 +80,8 @@ describe('currentUser', () => {
       displayName: 'Pepa',
       email: 'pepa.123@gmail.com',
     };
-    const current = currentUser();
-    expect(user).toBe(current);
+    const current = currentUser(user);
+    expect(current).toEqual(user);
   });
 });
 
