@@ -220,7 +220,7 @@ background-color: transparent;
     background: linear-gradient( to right bottom, 
         rgba(255, 255, 255, 0.919), 
         rgba(255, 255, 255, 0.72) );
-    bottom: 1vh;
+    top: 43vh;
     width: 95vw;
     border-radius: 20px;
     display: flex;
@@ -228,10 +228,9 @@ background-color: transparent;
     flex-direction: column;
     justify-content: center;
     transition:  0.5s;
-   /*  */
 }
 .show{
-    bottom: -100vh;
+    top: -100vh;
     transition:  0.5s;
 }
 .label-name{
