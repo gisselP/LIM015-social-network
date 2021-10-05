@@ -37,15 +37,14 @@ export const signIn = () => {
           <div class='form-div'>
             <input type="submit" id="start-button" class="form-button" value="Iniciar sesión">
           </div>
+          <button class="form-button"> 
+            <img class='google-icon' src='https://cdn-icons-png.flaticon.com/512/300/300221.png'>
+            <a id="signin-google" href="#/google">Acceder con Google</a>
+          </button>
+          <div class="signin-access-items">
+            <span>¿No tienes cuenta?</span><a class="sgn" href="#/signup">Create una</a>
+          </div>
         </form>
-      <ul class="home-list">
-        <li class="signin-access-items">
-          <button class="google-button"> <a id="signin-google" href="#/google">Acceder con Google</a></button>
-        </li>
-        <li class="signin-access-items">
-          <span>¿No tienes cuenta?</span><a class="sgn" href="#/signup">Create una</a>
-        </li>
-      </ul>
     </div>
     <div>
       <img class="img-web" src="./img/gato-home.png">

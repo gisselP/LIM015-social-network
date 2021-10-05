@@ -33,9 +33,10 @@ export const pageOnlyCats = () => {
   const pageOcView = `
   <section class="page-container">
     <header class = "header-container">
+      <div class="cat-icon"><i class="fas fa-cat " ></i></div>
       <img src="./img/only-cats.png" "alt='only-cats' class="page-title">
       <i class="fas fa-sign-out-alt" id="sign-out"></i>
-      <i class="fas fa-cat" style="display:none"></i>
+      
     </header>
     <main class = "main-container" >
       <section class="label-container">
@@ -62,7 +63,8 @@ export const pageOnlyCats = () => {
             <textarea class="text-input" id="text-input" placeholder="¿Miau esta pasando?"></textarea>
             <div class="post-icon">
               <label class="postImage">
-                <i class="fas fa-image"></i> <input class="post-file" type="file" id="postImage" accept="image/*"/> 
+                <input class="post-file" type="file" id="postImage" accept="image/*" style="display:none" /> 
+                <i class="fas fa-image"></i>
               </label>
               <button class="post-button hide" id="cancel-button" type="submit">Cancelar</button>
               <button class="post-button" id="post-button" type="submit">Meow</button>
@@ -71,17 +73,18 @@ export const pageOnlyCats = () => {
         </article>
         <section id="other-post"></section>
       </section>
-      <aside class="profile-container">
+      <aside class="profile-container show">
         <div class="container-fondo">
           <img src="./img/profile.png" "alt='fondo' class="profile-fondo">
         </div>
-        <div class="container-phot">
-          <img src="${photoUser}" "alt='picture' class="profile-phot">
+        <div class="container-userPhoto">
+          <img src="${photoUser}" "alt='picture' class="profile-userPhoto">
         </div>
-        <p class="profile-name"> ${localUser.displayName} </p>
-        <p class="profile-email"> ${email} </p>
-        <p class="biography-name"> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-        <p class="profile-btn" id="profile-btn">Editar Perfil</p>
+        <div class="container-profile">
+          <p class="profile-name"> ${localUser.displayName} </p>
+          <p class="profile-email"> ${email} </p>
+        </div>
+        <button class="profile-btn" id="profile-btn">Editar Perfil</button>
       </aside>
     </main>
   </section>`;
@@ -89,10 +92,23 @@ export const pageOnlyCats = () => {
   const sectionElement = document.createElement('section');
   sectionElement.classList.add('container-box');
   sectionElement.innerHTML = pageOcView;
+
   // -----Botones del Post
   const btnPublish = sectionElement.querySelector('#post-button');
   const textInput = sectionElement.querySelector('#text-input');
 
+  // -----Botón del perfil
+  const catToggle = sectionElement.querySelector('.fa-cat');
+  const catMenu = sectionElement.querySelector('.profile-container');
+  catToggle.addEventListener('click', () => {
+    catMenu.classList.toggle('show');
+  });
+
+  // -----Botón de editar perfil
+  const editProfBtn = sectionElement.querySelector('.profile-btn');
+  editProfBtn.addEventListener('click', () => {
+    swal('Queda pendiente nuevas actualizaciones, meow!');
+  });
   // -------- Leer o mostrar Posts (R) --------
 
   const readPosts = () => {
