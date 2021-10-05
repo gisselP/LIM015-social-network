@@ -5,7 +5,7 @@
 * [1. Preámbulo](#1-preámbulo)
 * [2. Resumen del proyecto](#2-resumen-del-proyecto)
 * [3. Historias de usuario](#4-historia-de-usurio)
-* [5. Pagina web](#5-pagina-web)
+* [4. Pagina web](#5-pagina-web)
 
 ## 1. Preámbulo
 
@@ -21,19 +21,13 @@ de acuerdo a determinadas etiquetas o su popularidad, lo más reciente, o lo
 más comentado.
 
 ## 2. Resumen del proyecto
-Red social que permite a cualquier usuario crear una cuenta de
-acceso y loguearse con ella; crear, editar, borrar y _"likear"_ publicacciones implementada en lenguaje javascript utilizando css, html y Firebase para el almacenamiento de datos.
+OnlyCats es una red social creada para interacturar y compartir contenido con usuarios amantes de los gatos. Te permite crear una cuenta de acceso y loguearse con ella; crear, editar, borrar y _"likear"_ publicaciones. Implementada en lenguaje Javascript utilizando CSS, HTML y Firebase para el almacenamiento de datos.
 ## 3. Historias de usuario
 ### 3.1 Definición del producto
-
-* Quiénes son los principales usuarios de producto.
-* Qué problema resuelve el producto / para qué le servirá a estos usuarios.
+Los principales usuarios del producto son personas mayores de 16 años amantes de los gatos que interactuan constantemente en redes sociales. Esta red es útil para encontrar memes y anécdotas en un solo lugar.
 
 ### 3.2 Historias de usuario
-
-Una vez que se entendio las necesidades de los usuarixs, se escribieron. Cada
-una de las Historias de Usuario tiene:
-
+Cada una de las Historias de usuario contiene:
 * **Criterios de Aceptación:** Todo lo que debe ocurrir para satisfacer las
   necesidades del usuario.
 
@@ -76,3 +70,18 @@ Siguiendo el flujo del prototipo de baja fidelidad, se realizo el prototipo de a
 
 ## 4. Página web (responsive)
 Se puede ver en dispositivos de pantallas grandes (computadoras/es, laptops, etc.) y pequeñas (_tablets_, celulares, etc.). Se implementaron con la técnica de _`mobile first`_ .
+
+* **Vista mobile:**
+
+    ![mobile](./src/img/responsiveMob.png)
+    ![mobile](./src/img/responsiveMob2.png)
+
+
+* **Vista dekstop:**
+
+    ![tablet](./src/img/responsiveTablet.png)
+
+* **Vista dekstop:**
+
+    ![desktop](./src/img/responsiveDeks.png)
+    ![desktop](./src/img/responsiveDeks2.png)
