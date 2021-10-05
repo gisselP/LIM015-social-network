@@ -112,6 +112,7 @@ export const pageOnlyCats = () => {
   // -------- Leer o mostrar Posts (R) --------
 
   const readPosts = () => {
+    console.log(getCollection());
     getCollection().onSnapshot((querySnapshot) => {
       const newPost = sectionElement.querySelector('#other-post');
       newPost.innerHTML = ' ';

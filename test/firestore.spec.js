@@ -1,6 +1,6 @@
 import MockFirebase from 'mock-cloud-firestore';
 import {
-  postCollection, getCollection, postUserCollection, getUserCollection, deletePost,
+  postCollection, getCollection, postUserCollection, getUserCollection, deletePost, getPost,
 } from '../src/firebase/firebase-firestore.js';
 
 // Simulación de la data
@@ -32,38 +32,68 @@ describe('postCollection', () => {
   it('debería ser una función', () => {
     expect(typeof postCollection).toBe('function');
   });
-  it('debería insertar un nuevo doc', () => {
+  it('debería recibir un objeto', () => {
     postCollection('Pepa', 'hola, que tal', 'pepa@gmail.com', 'a3b4c5')
-      .then(() => {
-        getCollection().then((docRef) => {
-          docRef.forEach((doc) => {
-            const dataContent = doc.data();
-            expect(dataContent).toBe('Pepa', 'hola, que tal', 'pepa@gmail.com', 'a3b4c5');
-          });
-        });
+      .then((res) => {
+        expect(typeof res).toBe('object');
       })
       .catch(() => {
-
       });
   });
 });
 
+describe('getCollection', () => {
+  it('debería ser una función', () => {
+    expect(typeof getCollection).toBe('function');
+  });
+
+  it('debería recibir un objeto', () => {
+    getCollection()
+      .then((res) => {
+        expect(typeof res).toBe('object');
+      })
+      .catch(() => {
+      });
+  });
+});
 describe('postUserCollection', () => {
   it('debería ser una función', () => {
     expect(typeof postUserCollection).toBe('function');
   });
-  it('debería insertar un nuevo doc', () => {
+  it('debería recibir un objeto', () => {
     postUserCollection('Pepa', 'pepa@gmail.com')
-      .then(() => {
-        getUserCollection().then((docRef) => {
-          docRef.forEach((doc) => {
-            const dataContent = doc.data();
-            expect(dataContent).toBe('Pepa', 'pepa@gmail.com');
-          });
-        });
+      .then((res) => {
+        expect(typeof res).toBe('object');
       })
       .catch(() => {
+      });
+  });
+});
 
+describe('getUserCollection', () => {
+  it('debería ser una función', () => {
+    expect(typeof getUserCollection).toBe('function');
+  });
+  it('debería recibir un objeto', () => {
+    getUserCollection()
+      .then((res) => {
+        expect(typeof res).toBe('object');
+      })
+      .catch(() => {
+      });
+  });
+});
+
+describe('getPost', () => {
+  it('debería ser una función', () => {
+    expect(typeof getPost).toBe('function');
+  });
+  it('debería recibir un objeto', () => {
+    getPost()
+      .then((res) => {
+        expect(typeof res).toBe('object');
+      })
+      .catch(() => {
       });
   });
 });
