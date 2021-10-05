@@ -1,7 +1,7 @@
 import MockFirebase from 'mock-cloud-firestore';
 import {
   postCollection, getCollection, postUserCollection,
-  getUserCollection, deletePost, getPost,
+  getUserCollection, deletePost, getPost, editPost,
 } from '../src/firebase/firebase-firestore.js';
 
 // Simulación de la data
@@ -93,5 +93,21 @@ describe('getPost', () => {
         expect(typeof dataContent).toBe('object');
       })
       .catch(() => {});
+  });
+});
+
+describe('editPost', () => {
+  it('updatePost deberia ser una función', () => {
+    expect(typeof editPost).toBe('function');
+  });
+  it('Debería poder actualizar un post', () => {
+    editPost('a3b2c3', 'No quiero compartir nada');
+    getCollection().then((docRef) => {
+      docRef.forEach((doc) => {
+        if (doc.data().id === 'a3b2c3') {
+          expect(doc.data().text).toBe('No quiero compartir nada');
+        }
+      });
+    });
   });
 });
