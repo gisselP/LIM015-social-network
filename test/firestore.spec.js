@@ -89,17 +89,25 @@ describe('getPost', () => {
     expect(typeof getPost).toBe('function');
   });
   it('debería recibir un objeto', () => {
-    getPost()
-      .then((res) => {
-        expect(typeof res).toBe('object');
-      })
-      .catch(() => {
+    getPost().then((docRef) => {
+      docRef.forEach((docAboutCollection) => {
+        const postInfo = docAboutCollection.data();
+        expect(typeof postInfo).toBe('object');
       });
+    });
   });
 });
 
 describe('deletePost', () => {
   it('debería ser una función', () => {
     expect(typeof deletePost).toBe('function');
+  });
+  it('debería borrar post', () => {
+    deletePost()
+      .then((res) => {
+        expect(typeof res).toBe('object');
+      })
+      .catch(() => {
+      });
   });
 });

@@ -112,7 +112,6 @@ export const pageOnlyCats = () => {
   // -------- Leer o mostrar Posts (R) --------
 
   const readPosts = () => {
-    console.log(getCollection());
     getCollection().onSnapshot((querySnapshot) => {
       const newPost = sectionElement.querySelector('#other-post');
       newPost.innerHTML = ' ';
@@ -187,7 +186,7 @@ export const pageOnlyCats = () => {
       btnCancel.addEventListener('click', () => {
         textInput.value = '';
         btnPublish.innerText = 'Meow';
-        // editStatus = false;
+        editStatus = false;
         sectionElement.querySelector('.hide').style.display = 'none';
         console.log('cancelado');
       });
@@ -236,10 +235,11 @@ export const pageOnlyCats = () => {
           postCollection(textInput.value, displayName, photoUser, email, uid, '');
           textInput.value = '';
         }
-      } else {
+      } else if (editStatus === true) {
         await editPost(id, textInput.value);
         textInput.value = '';
         btnPublish.innerText = 'Meow';
+        editStatus = false;
         sectionElement.querySelector('.hide').style.display = 'none';
       }
     } else if (textInput.value.length === 0) {

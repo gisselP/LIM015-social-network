@@ -142,13 +142,16 @@ background-color: transparent;
 }
 .text-output,
 .text-input{
-    width: 35vw;
+    width: 70vw;
     min-width: 180px;
     height: 50px;
     border-radius: 10px;
     resize: none;
     border:none;
     outline: none;
+}
+.text-input{
+    width: 50vw;
 }
 .text-output{
     padding-top: 5px;
@@ -239,6 +242,7 @@ background-color: transparent;
 .post-photo{
     width: 58vw;
     min-width: 190px;
+    padding-top: 15px;
 }
 .likes-container{
     display: flex;
