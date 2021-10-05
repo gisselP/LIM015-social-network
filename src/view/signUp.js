@@ -47,12 +47,10 @@ export const signUp = () => {
         <div class='form-div'>
           <input type="submit" id="create-account"" class="form-button" value="Crear cuenta">
         </div>
-      </form>
-      <ul class="home-list">
-        <li class="signin-access-items">
+        <div class="signin-access-items">
           <span>¿Tienes cuenta?</span><a class="sgn" href="#/signin"> Inicia con ella</a>
-        </li>
-      </ul>
+        </div>
+      </form>
     </div>
     <div>
       <img class="img-web" src="./img/gato-home.png">
@@ -97,6 +95,7 @@ export const signUp = () => {
             console.log(user);
             user.updateProfile({
               displayName: signupUsername,
+              bio: 'j',
             }).then(() => {
             }).catch((error) => error);
 
