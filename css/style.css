@@ -50,10 +50,7 @@ body{
     color: #aa7393;
     margin: 10px;
 }
-.home-list{
-    padding: 0px;
-    list-style: none;
-}
+
 .home-items{
     margin: 28px auto 0px;
     width: 220px;
@@ -104,6 +101,9 @@ body{
     bottom: -100%;
     margin: auto;
 }
+.google-icon{
+    width: 20px;
+}
 /*---------------------View Signin & Signup-------------------- */
 .signup-register{
     color: #433CA7;
@@ -135,13 +135,10 @@ body{
     text-align: center;
     text-decoration: none;
     color: #433CA7;
-    margin:20px;
+    margin-top:20px;
 }
 
 /*----------------------- View Signin: Form- ---------------------- */
-form{
-	width: 200px;
-}
 .container-form{
     display: flex;
     justify-content: center;
@@ -156,7 +153,8 @@ form{
     position: absolute;
     top: 0;
     left: 1rem;
-    width: 100%;
+    width: 17vw;
+    min-width: 150px;
     height: 100%;
     font-size: 1rem;
     border: transparent;
@@ -175,8 +173,8 @@ form{
     transition: .5s;
 }
 .form-button{
-	display: block;
-	width: 100%;
+	width: 20vw;
+    min-width: 220px;
 	height: 50px;
 	border-radius: 15px;
 	outline: none;
@@ -192,6 +190,10 @@ form{
 	cursor: pointer;
 	transition: .5s;
     font-weight: 700;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
 }
 .form-button:hover{
     box-shadow: 7px 7px 15px rgba(0, 0, 0, 0.25);
@@ -233,12 +235,23 @@ a{
     font-weight: 700;
 }
 .input-div {
+    width:20vw;
+    min-width: 220px;
     position: relative;
     display: grid;
     grid-template-columns: 7% 93%;
     margin-top: 25px;
     padding: 5px 0;
     border-bottom: 2px solid #d9d9d9;
+}
+.fa-eye {
+    position: absolute;
+    right: 0rem;
+    padding: 0 .9rem;
+    color: #80868B;
+    font-size: 1.3rem;
+    transition: .5s;
+    cursor:pointer;
 }
 span{
     color: rgb(75, 73, 73);

@@ -1,3 +1,4 @@
+/* eslint-disable no-undef */
 /* eslint-disable no-alert */
 /* eslint-disable no-console */
 import { createUser, emailVerification, currentUser } from '../firebase/firebase-auth.js';
@@ -39,18 +40,17 @@ export const signUp = () => {
           <div class='div'>
             <input class='form-input' type='password' id="signup-password" placeholder=" "  autocomplete=off required>
             <label class='form-label'>Contraseña</label>
+            <i class="far fa-eye" id="form-eye"></i>
           </div>
         </div>
         <span class="error-password"></span>
         <div class='form-div'>
           <input type="submit" id="create-account"" class="form-button" value="Crear cuenta">
         </div>
-      </form>
-      <ul class="home-list">
-        <li class="signin-access-items">
+        <div class="signin-access-items">
           <span>¿Tienes cuenta?</span><a class="sgn" href="#/signin"> Inicia con ella</a>
-        </li>
-      </ul>
+        </div>
+      </form>
     </div>
     <div>
       <img class="img-web" src="./img/gato-home.png">
@@ -59,7 +59,14 @@ export const signUp = () => {
 
   sectionElement.classList.add('container-box');
   sectionElement.innerHTML = viewSignUp;
-
+  const eyebtn = sectionElement.querySelector('#form-eye');
+  eyebtn.addEventListener('click', (e) => {
+    e.preventDefault();
+    const inputPassword = sectionElement.querySelector('#signup-password');
+    const type = inputPassword.getAttribute('type') === 'password' ? 'text' : 'password';
+    inputPassword.setAttribute('type', type);
+  });
+  /* ------------------------------Registrar con correo y contraseña ---------------------- */
   const signupForm = sectionElement.querySelector('#create-account');
   signupForm.addEventListener('click', (e) => {
     e.preventDefault();
@@ -82,11 +89,13 @@ export const signUp = () => {
       createUser(signupEmail, signupPassword)
         .then(() => {
           emailVerification().then(() => {
-            window.alert('Verification send');
+            swal('La verificación ha sido enviada.');
             window.location.hash = '#/signin';
             const user = currentUser();
+            console.log(user);
             user.updateProfile({
               displayName: signupUsername,
+              bio: 'j',
             }).then(() => {
             }).catch((error) => error);
 

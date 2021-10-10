@@ -20,14 +20,12 @@ export const home = () => {
           Comparte experiencias, fotos y más. Únete.
         </p>
         <nav>
-          <ul class="home-list">
-            <li class="home-items">
-              <a href="#/signin" class="links-items">Iniciar Sesión</a>
-            </li>
-            <li class="home-items">
-              <a href="#/signup" class="links-items">Regístrate</a>
-            </li>
-          </ul>
+          <div class="home-items">
+            <a href="#/signin" class="links-items">Iniciar Sesión</a>
+          </div>
+          <div class="home-items">
+            <a href="#/signup" class="links-items">Regístrate</a>
+          </div>
         </nav>
       </div>
       <div>
